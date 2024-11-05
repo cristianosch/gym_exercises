@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# GYM APP 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="Gym-App/home.png" >
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+**Gym-App** is a simple web application developed as a template to assist in workout planning. It utilizes external APIs to provide an interactive experience for users, allowing them to search for and view exercises categorized by muscle group, watch YouTube videos with instructions on how to perform exercises correctly, and see GIF images illustrating how the exercises are performed.
 
-### `npm start`
+### Key Features:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Exercise Search**: Users can search for exercises based on the muscle group category (e.g., chest, legs, back, etc.).
+- **Instructional Videos**: Using the YouTube API, users can watch videos that demonstrate how to correctly perform the exercise.
+- **GIF Images**: Each exercise includes a GIF showing how to execute it, with the highlighted muscle group being worked.
+- **Flexible Template**: This app serves as a simple template for any application that needs to integrate exercise and video APIs.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies
 
-### `npm test`
+This project uses the following technologies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React**: JavaScript library for building the user interface.
+- **React-Bootstrap**: A responsive, styled component library based on Bootstrap.
+- **RapidAPI**: A service to fetch exercise information, including muscle groups and GIFs.
+- **YouTube API**: For searching YouTube videos that explain how to perform the exercises.
 
-### `npm run build`
+## How to Run the Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js and npm (or yarn) installed.
+- A **RapidAPI** account to access the exercise API.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Steps to Run
 
-### `npm run eject`
+1. Clone the repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    git clone https://github.com/YOUR-USER/Gym-App.git
+    cd Gym-App
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Install the dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    npm install
 
-## Learn More
+3. Create a .env file in the root of the project and add your RapidAPI URL and API key (instructions on how to obtain the key can be found in the RapidAPI documentation):
+    
+    REACT_APP_RAPIDAPI_KEY=<YOUR_RAPIDAPI_KEY>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**How to obtain an API key:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    Visit RapidAPI.
+    Find the exercise API you want to use (e.g., ExerciseDB).
+    Sign up and generate your API key.
+    
+4. After configuring the .env file, start the development server:
 
-### Code Splitting
+    npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    The app will be available at http://localhost:3000.
 
-### Analyzing the Bundle Size
+# API Functionality
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Exercise API (RapidAPI)**
 
-### Making a Progressive Web App
+The exercise API provides a list of exercises categorized by muscle group (e.g., chest, legs, back). For each exercise, the API returns:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    Name of the exercise.
+    Category of the exercise (muscle group).
+    A GIF illustrating the exercise.
+    Details on which body part is primarily worked during the exercise.
 
-### Advanced Configuration
+# YouTube API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The YouTube API is used to search for instructional videos on how to perform exercises. When a user searches for an exercise, the API returns related videos that can be watched directly in the app.
 
-### Deployment
+# Main Components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    Navbar: Navigation bar containing links to main pages.
+    Exercises: Displays a list of exercises based on user search.
+    ExerciseCard: Individual component for each exercise, showing the name, GIF, and muscle group worked.
+    Detail: Displays details of the exercise, including the YouTube video.
 
-### `npm run build` fails to minify
+# Final Thoughts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    Project Expansion: This project can be expanded with additional features such as user login, exercise history, favorites, etc.
+    UI Customization: While it’s a simple template, feel free to customize the design with your own preferences, using Bootstrap or your own styles. 
+
+# Contributing
+
+Contributions are welcome! If you have suggestions for improvements, bug fixes, or new features, feel free to open an issue or submit a pull request.

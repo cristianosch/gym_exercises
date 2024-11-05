@@ -1,8 +1,28 @@
 body {
     font-family: 'Josefin Sans';
-    background-color: #216163;
+    background-color: #000000;
   }
-  
+  .navbar {
+    position: relative;
+    z-index: 1050; /* Garantir que o menu está acima de outros elementos */
+  }
+  .navbar-nav .nav-link {
+    font-family: 'Roboto', sans-serif; /* Definir a família de fontes */
+    font-weight: 700; /* Peso da fonte */
+    font-size: 1.1rem; /* Tamanho da fonte */
+    text-transform: uppercase; /* Deixa o texto em maiúsculo */
+  }  
+  .navbar-brand {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; /* Peso da fonte para o título */
+  }
+  .MuiTypography-root {
+    color: #385fc8;
+  }
+  .MuiButtonBase-root {
+    color: #385fc8;
+  }
+ 
   * {
     padding: 0px;
     margin: 0px;
@@ -70,7 +90,7 @@ body {
     border-top: 4px solid #f1692e;
     border-bottom-left-radius:20px;
     border-bottom-right-radius:20px;
-    box-shadow: 2px 2px 2px 1px rgba(247, 246, 246, 0.2);
+    box-shadow: 2px 2px 2px 1px rgba(255, 186, 186, 0.829);
     text-decoration: none;
     display: flex;
     justify-content: space-between;
@@ -95,8 +115,8 @@ body {
   }
   
   .search-btn:hover {
-    color: #182d65 !important;
-    border: 1px solid #182d65 !important;
+    color: #da8e37 !important;
+    border: 1px solid #5b72b4 !important;
   }
   
   .exercise-video {
